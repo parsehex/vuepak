@@ -5,7 +5,7 @@ export default defineConfig({
 	plugins: [vue()],
 	build: {
 		lib: {
-			entry: 'src/main.ts',
+			entry: 'src/index.ts',
 			name: 'vuepak',
 			formats: ['es', 'cjs'],
 			fileName: (format) => (format === 'cjs' ? 'vuepak.cjs' : 'vuepak.es.js'),
