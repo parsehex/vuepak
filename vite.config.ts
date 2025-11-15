@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-})
+	plugins: [vue()],
+	build: {
+		lib: {
+			entry: './src/main.ts',
+			name: 'Vuepak',
+			fileName: (format) => `vuepak.${format}.js`,
+		},
+		rollupOptions: {
+			external: ['vue'],
+			output: {
+				globals: { vue: 'Vue' },
+			},
+		},
+	},
+});
