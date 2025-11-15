@@ -5,16 +5,18 @@
   "type": "module",
   "main": "./dist/vuepak.cjs",
   "module": "./dist/vuepak.es.js",
+  "types": "./dist/main.d.ts",
   "files": ["dist"],
   "exports": {
     ".": {
+      "types": "./dist/main.d.ts",
       "import": "./dist/vuepak.es.js",
       "require": "./dist/vuepak.cjs"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build && vue-tsc -b tsconfig.build.json",
     "preview": "vite preview"
   },
   "peerDependencies": {
