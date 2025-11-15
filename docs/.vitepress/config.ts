@@ -18,7 +18,10 @@ export default defineConfig(({ mode }) => {
 		},
 		themeConfig: {
 			// https://vitepress.dev/reference/default-theme-config
-			nav: [{ text: 'Home', link: '/' }],
+			nav: [
+				{ text: 'Home', link: '/' },
+				{ text: 'Dev Docs', link: '/dev' },
+			],
 			outline: 'deep',
 
 			sidebar: [],

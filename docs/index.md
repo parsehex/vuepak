@@ -54,7 +54,7 @@ Result:
 <script setup lang="ts">
 import { JsonViewer } from '@parsehex/vuepak';
 
-const jsonData = 'hey, how are you?';
+const jsonData = 'Test value';
 </script>
 ```
 
