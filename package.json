@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/vuepak.umd.js",
+  "main": "./dist/vuepak.cjs",
   "module": "./dist/vuepak.es.js",
   "files": ["dist"],
   "exports": {
     ".": {
       "import": "./dist/vuepak.es.js",
-      "require": "./dist/vuepak.umd.js"
+      "require": "./dist/vuepak.cjs"
     }
   },
   "scripts": {
