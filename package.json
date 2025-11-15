@@ -1,7 +1,7 @@
 {
   "name": "@parsehex/vuepak",
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "main": "./dist/vuepak.cjs",
   "module": "./dist/vuepak.es.js",
@@ -14,7 +14,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/vuepak.es.js",
       "require": "./dist/vuepak.cjs"
-    }
+    },
+    "./vuepak.css": "./dist/vuepak.css"
   },
   "scripts": {
     "dev": "vite",
