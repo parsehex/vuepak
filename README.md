@@ -1,8 +1,8 @@
 # vuepak
 
-This is a component library for Vue intended for my own use.
+[[Docs](https://parsehex.github.io/vuepak/)]
 
-There are some components that I use in multiple projects, so I figured I might as well start a collection of them which I can import and stop rewriting.
+This is a component library for Vue intended for [my](https://parsehex.github.io/) own use. There are some components that I use in several projects, so I figured I might as well start a collection of them which I can import and stop rewriting.
 
 ## Install
 
@@ -70,7 +70,12 @@ npm login
 ```
 
 1. Make desired changes to the project.
-2. Update version number in `/package.json`.
+2. Increment the version number in `/package.json`, manually or by using:
+
+```bash
+npm version <patch | minor | major>
+```
+
 3.
 
 ```bash
