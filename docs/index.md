@@ -21,42 +21,68 @@ import '@parsehex/vuepak/vuepak.css';
 
 ### JsonViewer
 
-#### Code
+To use, import the `JsonViewer` component and pass data using the `data` prop. The data can be any kind of type.
+
+#### Object
 
 ```vue
 <template>
-	<JsonViewer :data="jsonData" />
+  <JsonViewer :data="jsonData" />
 </template>
 
 <script setup>
 import { JsonViewer } from '@parsehex/vuepak';
 
 const jsonData = {
-	name: 'Vuepak',
-	version: '0.1.6',
-	components: ['JsonViewer', 'Spinner'],
+  name: 'Vuepak',
+  version: '0.1.6',
+  components: ['JsonViewer', 'Spinner'],
 };
 </script>
 ```
 
-#### Preview
+Result:
 
-<DemoJsonViewer />
+<DemoJsonViewerObject />
 
-### Spinner
-
-#### Code
+#### String
 
 ```vue
 <template>
-	<Spinner />
+  <JsonViewer :data="jsonData" />
 </template>
+<script setup lang="ts">
+import { JsonViewer } from '@parsehex/vuepak';
 
-<script setup>
-import { Spinner } from '@parsehex/vuepak';
+const jsonData = 'hey, how are you?';
 </script>
 ```
 
-#### Preview
+Result:
+
+<DemoJsonViewerString />
+
+### Spinner
+
+To use, import the `Spinner` component and use `v-if` to control whether to display it.
+
+```vue{3}
+<template>
+  <button @click="toggleLoading">Toggle</button>
+  <Spinner v-if="loading" />
+</template>
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Spinner } from '@parsehex/vuepak';
+
+const loading = ref(true);
+
+function toggleLoading() {
+  loading.value = !loading.value;
+}
+</script>
+```
+
+Result:
 
 <DemoSpinner />
