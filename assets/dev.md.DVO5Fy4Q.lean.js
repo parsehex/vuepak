@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as e,ae as t}from"./chunks/framework.D_TUE7_m.js";const c=JSON.parse('{"title":"Development","description":"","frontmatter":{},"headers":[],"relativePath":"dev.md","filePath":"dev.md"}'),n={name:"dev.md"};function l(h,s,p,d,o,k){return e(),a("div",null,[...s[0]||(s[0]=[t("",12)])])}const g=i(n,[["render",l]]);export{c as __pageData,g as default};
