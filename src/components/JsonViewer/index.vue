@@ -1,6 +1,7 @@
 <template>
   <div class="json-viewer root">
-    <JsonViewerItem :data="data" :depth="0" />
+    <JsonViewerItem v-if="data !== undefined && data !== null" :data="data" :depth="0" />
+    <span v-else>undefined</span>
   </div>
 </template>
 <script lang="ts">
@@ -26,5 +27,9 @@ export default defineComponent({
   background-color: #f8f8f8;
   padding: 1rem;
   border-radius: 4px;
+}
+
+span {
+  color: #666;
 }
 </style>

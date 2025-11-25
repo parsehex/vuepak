@@ -7,7 +7,8 @@
     <div v-if="isExpanded && isObject" class="nested-content">
       <template v-if="isArray">
         <div v-for="(item, index) in data" :key="index" class="array-item">
-          <JsonViewerItem :data="item" :depth="depth + 1" />
+          <JsonViewerItem v-if="item !== undefined && item !== null" :data="item" :depth="depth + 1" />
+          <span v-else>undefined</span>
         </div>
       </template>
       <template v-else>
@@ -152,5 +153,9 @@ export default defineComponent({
 
 .value-line {
   display: inline;
+}
+
+span {
+  color: #666;
 }
 </style>
